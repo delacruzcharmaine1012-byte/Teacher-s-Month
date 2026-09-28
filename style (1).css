@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', 'Segoe UI', serif;
+}
+
+body {
+    background: #fff3e9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-image: 
+        radial-gradient(circle at 5% 5%, #ffd6e8 0%, transparent 40%),
+        radial-gradient(circle at 95% 95%, #ffc2d9 0%, transparent 40%);
+}
+
+.card {
+    background: #fff9f2;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 40px 50px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(180, 80, 120, 0.12);
+    overflow: hidden;
+}
+
+/* Decorative doodles */
+.doodle {
+    position: absolute;
+    font-size: 28px;
+    opacity: 0.85;
+    z-index: 1;
+}
+
+.flower-1 {
+    top: 15px;
+    left: 20px;
+}
+
+.flower-2 {
+    top: 20px;
+    right: 25px;
+}
+
+.flower-3 {
+    bottom: 15px;
+    left: 30px;
+}
+
+.heart {
+    bottom: 20px;
+    right: 20px;
+}
+
+.book {
+    top: 50px;
+    left: 40px;
+    font-size: 24px;
+}
+
+.pencil {
+    bottom: 50px;
+    right: 40px;
+    font-size: 24px;
+}
+
+/* Soft leaf borders */
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: #ffd6e8;
+    border-radius: 50% 30% 50% 30%;
+    opacity: 0.5;
+}
+
+.card::before {
+    top: -20px;
+    left: -20px;
+}
+
+.card::after {
+    bottom: -20px;
+    right: -20px;
+}
+
+h1 {
+    color: #992e2e;
+    font-size: 48px;
+    font-style: italic;
+    margin-bottom: 35px;
+    position: relative;
+    z-index: 2;
+}
+
+.photo-frame {
+    position: relative;
+    z-index: 2;
+    padding: 8px;
+    background: linear-gradient(135deg, #ffb3c1, #ffccd5);
+    border-radius: 20px;
+    margin-bottom: 35px;
+}
+
+.group-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+}
+
+.message {
+    color: #703838;
+    font-size: 20px;
+    line-height: 1.8;
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .message {
+        font-size: 17px;
+    }
+
+    .doodle {
+        font-size: 22px;
+    }
+}
